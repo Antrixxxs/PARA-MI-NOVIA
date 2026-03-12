@@ -29,9 +29,9 @@
                     <span class="page-number">1</span>
                 </div>
                 <div class="back fondo-floral">
-                    <div class="content-page content-centered">
-                        <h2 style="font-size: 2em;">Para mi amor</h2>
-                        <p class="typewriter-text" style="text-align: center;">Cada página es un pedacito de lo que siento por ti.</p>
+                    <div class="content-centered">
+                        <h2>Para mi amor</h2>
+                        <p class="typewriter-text" style="text-align: center;">Pasa las páginas para leer lo que tengo para ti...</p>
                     </div>
                     <span class="page-number">2</span>
                 </div>
@@ -42,17 +42,17 @@
                     <div class="content-page">
                         <h2>Mis pensamientos</h2>
                         <div class="typewriter-text">
-                            <p>Espero lo estés pasando bien en Huamachuco mi vida, en verdad que el tiempo se pasa volando y me siento muy feliz de haberme topado en tu camino. [cite: 6]</p>
-                            <p>Aún me acuerdo cuando le negaba a Bry sobre si pasaría algo entre nosotros. [cite: 7]</p>
-                            <p>Parece que terminó diferente a lo que pensaba y no me arrepiento de que las cosas acabaran así, abriste mi corazón y alegraste mi vida con tu presencia. [cite: 8]</p>
+                            <p>Espero lo estés pasando bien en Huamachuco mi vida, en verdad que el tiempo se pasa volando y me siento muy feliz de haberme topado en tu camino.</p>
+                            <p>Aún me acuerdo cuando le negaba a Bry sobre si pasaría algo entre nosotros.</p>
+                            <p>Parece que terminó diferente a lo que pensaba y no me arrepiento de que las cosas acabaran así, abriste mi corazón y alegraste mi vida con tu presencia.</p>
                             <img src="img/image1.png" class="mid-img polaroid">
                         </div>
                     </div>
                     <span class="page-number">3</span>
                 </div>
                 <div class="back fondo-floral">
-                    <div class="content-page content-centered">
-                        <p class="typewriter-text" style="text-align: center; font-style: italic;">"Te volvería a elegir una y mil veces más."</p>
+                    <div class="content-centered">
+                        <p class="typewriter-text" style="text-align: center;">"Eres la casualidad más bonita que me ha pasado."</p>
                     </div>
                     <span class="page-number">4</span>
                 </div>
@@ -62,15 +62,15 @@
                 <div class="front fondo-floral">
                     <div class="content-page">
                         <br><br>
-                        <p class="typewriter-text">No importa cuántos kilómetros nos separen, mi corazón siempre estará contigo. [cite: 10, 11]</p>
+                        <p class="typewriter-text">No importa cuántos kilómetros nos separen, mi corazón siempre estará contigo.</p>
                         <img src="img/img8.png" class="mid-img polaroid" style="width: 70%;">
-                        <p class="typewriter-text small">Algún día estaremos juntos, lo sé. Te amo tanto my love. [cite: 11, 12]</p>
+                        <p class="typewriter-text small">Algún día estaremos juntos, lo sé. Te amo tanto my love.</p>
                     </div>
                     <span class="page-number">5</span>
                 </div>
                 <div class="back fondo-floral">
                     <div class="content-page page-extra-padding">
-                        <p class="typewriter-text">"Este primer mes me ha enseñado que el tiempo es relativo. A veces un minuto hablando contigo se siente como un segundo, y un día sin escucharte se siente como una eternidad. He aprendido que no necesito grandes cosas para ser feliz, solo saber que estás bien y que, al final del día, seguimos eligiéndonos el uno al otro. Gracias por enseñarme a querer de una forma tan bonita y sincera." [cite: 13, 14]</p>
+                        <p class="typewriter-text">"Este primer mes me ha enseñado que el tiempo es relativo. A veces un minuto hablando contigo se siente como un segundo, y un día sin escucharte se siente como una eternidad. He aprendido que no necesito grandes cosas para ser feliz, solo saber que estás bien y que, al final del día, seguimos eligiéndonos el uno al otro. Gracias por enseñarme a querer de una forma tan bonita y sincera."</p>
                     </div>
                     <span class="page-number">6</span>
                 </div>
@@ -80,16 +80,16 @@
                 <div class="front fondo-floral">
                     <div class="content-page">
                         <h2>Para siempre</h2>
-                        <p class="typewriter-text">Gracias por este mes increíble. [cite: 15]</p>
+                        <p class="typewriter-text">Gracias por este mes increíble.</p>
                         <img src="img/img9.png" class="mid-img polaroid" style="width:90%;">
                     </div>
                     <span class="page-number">7</span>
                 </div>
                 <div class="back estilo-tapa vintage-lace">
                     <div class="content-centered">
-                        <h1 class="title-final">Te Amo</h1> [cite: 17]
+                        <h1 class="title-final">Te Amo</h1>
                         <div class="cameo-heart">❤️</div>
-                        <p class="signature">Tu amor eterno</p> [cite: 17]
+                        <p class="signature">Tu amor eterno</p>
                     </div>
                     <span class="page-number">8</span>
                 </div>
@@ -105,16 +105,16 @@
         audio.volume = 0.2;
 
         papers.forEach((paper, index) => {
-            paper.style.zIndex = papers.length - index; [cite: 20]
+            paper.style.zIndex = papers.length - index;
             paper.addEventListener("click", () => {
                 if (!paper.classList.contains("flipped")) {
-                    paper.classList.add("flipped"); [cite: 20]
-                    setTimeout(() => { paper.style.zIndex = index + 1; }, 400); [cite: 21]
-                    if (index === 0) wrapper.classList.add("opened"); [cite: 21]
+                    paper.classList.add("flipped");
+                    setTimeout(() => { paper.style.zIndex = index + 1; }, 500);
+                    if (index === 0) wrapper.classList.add("opened");
                 } else {
-                    paper.classList.remove("flipped"); [cite: 21]
-                    setTimeout(() => { paper.style.zIndex = papers.length - index; }, 400); [cite: 21]
-                    if (index === 0) wrapper.classList.remove("opened"); [cite: 22]
+                    paper.classList.remove("flipped");
+                    setTimeout(() => { paper.style.zIndex = papers.length - index; }, 500);
+                    if (index === 0) wrapper.classList.remove("opened");
                 }
             });
         });
@@ -122,8 +122,8 @@
         function toggleMusic(e) {
             e.stopPropagation();
             const icon = document.getElementById('icon');
-            if (audio.paused) { audio.play(); icon.innerText = "⏸️"; } [cite: 24]
-            else { audio.pause(); icon.innerText = "▶️"; } [cite: 24, 25]
+            if (audio.paused) { audio.play(); icon.innerText = "⏸️"; } 
+            else { audio.pause(); icon.innerText = "▶️"; }
         }
     </script>
 </body>
