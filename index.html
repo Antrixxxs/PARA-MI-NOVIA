@@ -31,7 +31,7 @@
                 <div class="back fondo-floral">
                     <div class="content-page content-centered">
                         <h2 style="font-size: 2em;">Para mi amor</h2>
-                        <p class="typewriter-text" style="text-align: center;">Pasa las páginas para leer lo que tengo para ti...</p>
+                        <p class="typewriter-text" style="text-align: center;">Cada página es un pedacito de lo que siento por ti.</p>
                     </div>
                     <span class="page-number">2</span>
                 </div>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="back fondo-floral">
                     <div class="content-page content-centered">
-                        <p class="typewriter-text" style="text-align: center;">"Eres la casualidad más bonita que me ha pasado."</p>
+                        <p class="typewriter-text" style="text-align: center; font-style: italic;">"Te volvería a elegir una y mil veces más."</p>
                     </div>
                     <span class="page-number">4</span>
                 </div>
@@ -64,13 +64,13 @@
                         <br><br>
                         <p class="typewriter-text">No importa cuántos kilómetros nos separen, mi corazón siempre estará contigo. [cite: 10, 11]</p>
                         <img src="img/img8.png" class="mid-img polaroid" style="width: 70%;">
-                        <p class="typewriter-text small">Algún día estaremos juntos, lo sé. Te amo tanto my love. [cite: 12]</p>
+                        <p class="typewriter-text small">Algún día estaremos juntos, lo sé. Te amo tanto my love. [cite: 11, 12]</p>
                     </div>
                     <span class="page-number">5</span>
                 </div>
                 <div class="back fondo-floral">
                     <div class="content-page page-extra-padding">
-                        <p class="typewriter-text">"Este primer mes me ha enseñado que el tiempo es relativo. A veces un minuto hablando contigo se siente como un segundo, y un día sin escucharte se siente como una eternidad. He aprendido que no necesito grandes cosas para ser feliz, solo saber que estás bien y que, al final del día, seguimos eligiéndonos el uno al otro. Gracias por enseñarme a querer de una forma tan bonita y sincera." [cite: 14]</p>
+                        <p class="typewriter-text">"Este primer mes me ha enseñado que el tiempo es relativo. A veces un minuto hablando contigo se siente como un segundo, y un día sin escucharte se siente como una eternidad. He aprendido que no necesito grandes cosas para ser feliz, solo saber que estás bien y que, al final del día, seguimos eligiéndonos el uno al otro. Gracias por enseñarme a querer de una forma tan bonita y sincera." [cite: 13, 14]</p>
                     </div>
                     <span class="page-number">6</span>
                 </div>
@@ -89,9 +89,9 @@
                     <div class="content-centered">
                         <h1 class="title-final">Te Amo</h1> [cite: 17]
                         <div class="cameo-heart">❤️</div>
-                        <p class="signature">Tu amor eterno</p>
+                        <p class="signature">Tu amor eterno</p> [cite: 17]
                     </div>
-                    <span class="page-number">8</span> [cite: 18]
+                    <span class="page-number">8</span>
                 </div>
             </div>
 
@@ -105,20 +105,16 @@
         audio.volume = 0.2;
 
         papers.forEach((paper, index) => {
-            paper.style.zIndex = papers.length - index;
+            paper.style.zIndex = papers.length - index; [cite: 20]
             paper.addEventListener("click", () => {
                 if (!paper.classList.contains("flipped")) {
-                    paper.classList.add("flipped");
-                    setTimeout(() => { 
-                        paper.style.zIndex = index + 1; 
-                    }, 400); // Cambio de capa sincronizado
-                    if (index === 0) wrapper.classList.add("opened");
+                    paper.classList.add("flipped"); [cite: 20]
+                    setTimeout(() => { paper.style.zIndex = index + 1; }, 400); [cite: 21]
+                    if (index === 0) wrapper.classList.add("opened"); [cite: 21]
                 } else {
-                    paper.classList.remove("flipped");
-                    setTimeout(() => { 
-                        paper.style.zIndex = papers.length - index; 
-                    }, 400);
-                    if (index === 0) wrapper.classList.remove("opened");
+                    paper.classList.remove("flipped"); [cite: 21]
+                    setTimeout(() => { paper.style.zIndex = papers.length - index; }, 400); [cite: 21]
+                    if (index === 0) wrapper.classList.remove("opened"); [cite: 22]
                 }
             });
         });
@@ -126,8 +122,8 @@
         function toggleMusic(e) {
             e.stopPropagation();
             const icon = document.getElementById('icon');
-            if (audio.paused) { audio.play(); icon.innerText = "⏸️"; } 
-            else { audio.pause(); icon.innerText = "▶️"; }
+            if (audio.paused) { audio.play(); icon.innerText = "⏸️"; } [cite: 24]
+            else { audio.pause(); icon.innerText = "▶️"; } [cite: 24, 25]
         }
     </script>
 </body>
